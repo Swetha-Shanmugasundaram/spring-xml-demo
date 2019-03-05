@@ -9,6 +9,10 @@ public class Main {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
         Movie movie = (Movie)applicationContext.getBean("movie");
         System.out.println(movie.getActor());
-        
+
+        Movie movie1 = (Movie)applicationContext.getBean("movie");
+        System.out.println(movie1.getActor());
+        System.out.println(movie==movie1);
+
     }
 }
